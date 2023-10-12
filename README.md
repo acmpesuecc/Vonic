@@ -21,6 +21,15 @@
 
 - Replace the `/your/project/folder/Source` with the `Source` folder from this project.
 - Build the project once again and you should have a working replica.
+### Debugging Your Builds : 
 
+- Visit `/your/path/JUCE/extras/AudioPluginHost/Builds`.
+- Build as per your operating system.
+    - XCode for OSX.
+    - Visual Studio for Windows
+    - Make files for linux :)
+- After this run `AudioPluginHost` and scan for VST3/AU plugins.
+- Ideally your build should appear on the list of identified plugins.
+- Drag and drop the plugin onto the debug area, make connections and test the build!
 
 #### Narayan :grimacing:
