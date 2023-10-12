@@ -307,9 +307,6 @@ juce::AudioProcessorValueTreeState::ParameterLayout VonicRewriteAudioProcessor::
         juce::AudioProcessorValueTreeState::ParameterLayout map;
         map.add(std::make_unique<juce::AudioParameterFloat>("HighPass","HighPass",juce::NormalisableRange<float>(20.f,20000.f,1.f,1.f),20.f));
         map.add(std::make_unique<juce::AudioParameterFloat>("LowPass","LowPass",juce::NormalisableRange<float>(20.f,20000.f,1.f,1.f),20.f));
-        map.add(std::make_unique<juce::AudioParameterFloat>("Peak","Peak",juce::NormalisableRange<float>(20.f,20000.f,1.f,1.f),750.f));
-        map.add(std::make_unique<juce::AudioParameterFloat>("Gain","Gain",juce::NormalisableRange<float>(-24.f,24.f,0.5f,1.f),0.f));
-        map.add(std::make_unique<juce::AudioParameterFloat>("Quality","Quality",juce::NormalisableRange<float>(0.1f,10.f,0.05f,1.f),1.f));
 
     juce::StringArray choices;
     for (int i = 0; i < 4; ++i)
@@ -323,6 +320,9 @@ juce::AudioProcessorValueTreeState::ParameterLayout VonicRewriteAudioProcessor::
     map.add(std::make_unique<juce::AudioParameterChoice>("HighPassGrad","HighPassGrad",choices,0));
     map.add(std::make_unique<juce::AudioParameterChoice>("LowPassGrad","LowPassGrad",choices,0));
 
+        map.add(std::make_unique<juce::AudioParameterFloat>("Peak","Peak",juce::NormalisableRange<float>(20.f,20000.f,1.f,1.f),750.f));
+        map.add(std::make_unique<juce::AudioParameterFloat>("Gain","Gain",juce::NormalisableRange<float>(-24.f,24.f,0.5f,1.f),0.f));
+        map.add(std::make_unique<juce::AudioParameterFloat>("Quality","Quality",juce::NormalisableRange<float>(0.1f,10.f,0.05f,1.f),1.f));
     
     
     return map;
